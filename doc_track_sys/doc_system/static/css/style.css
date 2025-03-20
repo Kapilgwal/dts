@@ -1,0 +1,92 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500;700&display=swap');
+
+/* Reset & Base Styles */
+body, h1, h2, h3, h4, h5, h6, ul, li, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f4f7fa, #e3edf8);
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.5s ease;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #1e3a8a; /* Deep blue */
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover effects with animated underline */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffdd57; /* Gold underline */
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffdd57;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+/* Main content styling */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+/* Subtle content hover effect */
+main:hover {
+    transform: scale(1.01);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
